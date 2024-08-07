@@ -1,0 +1,14 @@
+server:
+  port: 8060
+  error:
+    include-stacktrace: never
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3305/enterprise_challenge?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: ${ROOT_USER:root}
+    password: ${ROOT_PASSWORD:example}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update

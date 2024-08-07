@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  mysql:
+    image: mysql:8.0.33
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
+    ports:
+      - "3305:3306"
+    volumes:
+      - enterprise_challenge:/var/lib/mysql
+volumes:
+  enterprise_challenge:
